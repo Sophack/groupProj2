@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../db/connection');
 
 //same as the before exercises 
 //but there is a routes with API 
@@ -20,10 +20,6 @@ class Book extends Model {}
 //  • food_category_id int primary_key auto_increment
 //  • food_category_name varchar
 
-// Ingredients(table)
-//  • ingredient_id int primary_key auto_increment
-//  • ingredient_name varchar
-
 // Measurements(table)
 //  • measurement_id int primary_key auto_increment
 //  • measurement_name varchar
@@ -36,7 +32,7 @@ class Book extends Model {}
 
  
 
-Book.init(
+Recipe.init(
   {
     book_id: {
       type: DataTypes.INTEGER,
